@@ -3,7 +3,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>Simplex Solver</title>
+    <title>Metodo Simplex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,11 +39,23 @@
   ">
       <h1 class="titulo" style="
     text-align: center;
-    padding: 30px;">PL Solver | Método Simplex</h1>
+    padding: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    ">PL Solver | Método Simplex</h1>
   </div>
 
-    <button onclick="franson()">Calcular</button>
-    <!-- Navbar
+  <button onclick="franson(); doIt(2); doIt(1)" style="
+  transform: translate(600%,200%); background-color: rgb(168, 122, 153);
+  text-transform: uppercase;
+  width: 11rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+ " >Resolver</button>
+
+    <!-- Navbar style="transform: translate(1000%,800%)"
     ================================================== -->
     <!-- <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -81,7 +93,7 @@
 </div> -->
 
 <!--#########################################-->
-<center>
+<!-- <center> -->
 <form name="theSpreadsheet">
 
 <table  class="table-striped active">
@@ -98,7 +110,7 @@
 </tr>
 
 
-<div class="formulario">
+<div class="formulario" style=" margin-left: 30px;">
   <div class="col-sm-4">
   <select class="custom-select my-1 mr-sm-2" id="maxOmin">
     <option value="max">Maximizar</option>
@@ -137,7 +149,11 @@
   <div id="todasRestricciones" class="todasRestricciones mt-3 mb-4">
    
   </div>
+
+  
+
 </div>
+
 <!-- <button onclick="franson()">Calcular</button> -->
 
 <tr style="visibility: hidden;"><td><center>Mode: <select  NAME = "Mode" SIZE = 0> 
@@ -150,30 +166,33 @@
 
 	</SELECT>
 
-</center></td></tr>
+<!-- </center> -->
+</td></tr>
 
-<tr style="display: none;"><td><center>Rounding (significant digits): <input type=text size=2 value="6" name="acc"></center></td></tr>
+<tr style="visibility: hidden;"><td><center>Rounding (significant digits): <input type=text size=2 value="6" name="acc"></center></td></tr>
 <div class="row">
+  <center> 
 <tr>
-  <td align = center class="col-sm-2">Solucion:<br>
+  <td align = center class="col-sm-2" style=" transform: translateX(50%); " ><br>
   <b class="col-sm-2" >
-  <input style="min-width: 100%; text-align:center; border: none; " type=text size=80 disabled name="expr" value = " ">
+  <input style="min-width: 100%; text-align:center; border: none; background-color: white;  " type=text size=80 disabled name="expr" value = " ">
 </b>
 </div>
 <br>
 </tr>
-<input type="button" class="btn btn-primary btn-small" value = "Solve" onClick="doIt(2); doIt(1)"> &nbsp;
+</center>
+<input style="display: none;" type="button" class="btn btn-primary btn-small" value = "Resolver" onClick="doIt(2); doIt(1)"> &nbsp;
 
 <!-- <input type="button" class="btn btn-primary btn-small" value = "Example" onClick="doIt(5)"> &nbsp;
 
 <input type="button" class="btn btn-primary btn-mini" value = "Erase Everything" onClick="doIt(3)"> &nbsp; -->
 
 
-<tr>
+<tr style="transform: translateX(50%); background-color: white">
 
-<td align = center>
+<td >
 
-<textarea  style="min-width: 100%; border: none" name = "output" rows = 12 cols = 80>
+<textarea  style="min-width: 100%; border: none; overflow: auto" name = "output" rows = 12 cols = 80>
 
 </textarea>
 

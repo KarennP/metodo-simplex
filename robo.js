@@ -58,11 +58,12 @@ function numeroDeVariables(){
     var numVariables=document.getElementById('numVariables');
     var content=''
     for(let i=0; i<parseFloat(numVariables.value);i++){
-        content+=`<input style="font-weight: 400; color: #7b8a8b;
+        content+=`<input class="col-sm-1"
+        style="font-weight: 400; color: #7b8a8b;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #ced4da;
-        border-radius: 0.25rem; "  type="number" step="any" id="x${i+1}" required><label class="col-sm-1">X${i+1}+</label>`
+        border-radius: 0.25rem; "  type="number" step="any" id="x${i+1}" required><label class="col-xs">X${i+1}+</label>`
     }
    
     document.getElementById('funcObj').innerHTML=content;
@@ -74,11 +75,12 @@ function numeroDeRestricciones(){
     for(let a=0;a<parseFloat(numRes.value);a++){
         for(let i=0; i<parseFloat(numVariables.value);i++){
             content+=`
-            <input  style="font-weight: 400; color: #7b8a8b;
+            <input  class="col-sm-1"
+            style="font-weight: 400; color: #7b8a8b;
             background-color: #fff;
             background-clip: padding-box;
             border: 1px solid #ced4da;
-            border-radius: 0.25rem; "  type="number" step="any" id="resx${i+1}Res${a}" required><label class="col-sm-1"> X${i+1}+</label>
+            border-radius: 0.25rem; "  type="number" step="any" id="resx${i+1}Res${a}" required><label class="col-xs"> X${i+1}+</label>
             `
         }
         content+=` <select  style="font-weight: 400; color: #7b8a8b;
@@ -90,7 +92,8 @@ function numeroDeRestricciones(){
                     <option value=">=">>=</option>
                     <option value="=">=</option>
                 </select>
-                <input  style="font-weight: 400; color: #7b8a8b;
+                <input class="col-sm-1"
+                 style="font-weight: 400; color: #7b8a8b;
                 background-color: #fff;
                 background-clip: padding-box;
                 border: 1px solid #ced4da;
